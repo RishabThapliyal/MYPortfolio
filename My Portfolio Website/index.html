@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishab - Developer Porfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;300&family=Lobster&family=Permanent+Marker&family=Poppins:wght@400;700&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(35, 13, 61);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(56, 22, 88);
+        }
+
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(79, 193, 235);
+            font-size: 1.05rem;
+        }
+
+        main hr {
+            border: 0;
+            background-color: rgba(31, 102, 210, 0.61);
+            height: 1.2px;
+            margin: 50px 84px;
+        }
+
+        /* Add this inside your existing <style> tag */
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .burger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+        }
+
+        @media (max-width: 768px) {
+
+            /* Apply styles only when the screen width is 768px or less */
+            .burger {
+                display: flex;
+            }
+
+            .right {
+                display: none;
+                /* Hide the original navigation on smaller screens */
+            }
+
+            .nav-open .right {
+                display: block;
+                /* Show the navigation when the menu is open */
+            }
+        }
+
+
+        .left {
+            font-size: 2.01rem;
+        }
+
+        .right {
+            font-size: 1.3rem;
+        }
+
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 70px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2rem;
+
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: rgb(36, 36, 186);
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        section div img:hover {
+            width: 82%;
+            /* height: 50%; */
+        }
+
+        .btn:hover {
+            font-size: 1.09rem;
+        }
+
+        .text-purple {
+            color: rgb(255, 174, 54);
+
+        }
+
+        .text-gray {
+            color: rgb(205, 237, 88);
+        }
+
+        #element {
+            color: rgb(226, 237, 14);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.8rem;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            background-color: white;
+            width: 1px;
+            height: 93px;
+            margin: 0 120px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -30px;
+            left: -11px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            width: 150px;
+            font-size: 11px;
+            color: rgb(241, 224, 35);
+        }
+
+        section div div div:hover {
+            color: rgb(76, 232, 235);
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: rgb(31, 64, 227);
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 220px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: grey;
+            padding: 12px 0;
+        }
+
+        footer div div ul li:hover {
+            color: rgb(115, 239, 57);
+            font-size: 1.08rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Rishab's Portfolio</div>
+
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <div class="right">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Connect Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="text-purple">Rishab Thapliyal</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit GitHub</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="secondSection">
+            <span class="text-gray"> What I have done so far</span>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+
+                <div class="vertical">
+                    <img class="image-top" src="pinterest.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer - Pintrest (2016-2017)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui consequuntur necessitatibus
+                        dolores molestias nisi, aut soluta id sequi error delectus veritatis nam.
+                    </div>
+                </div>
+
+
+                <div class="vertical">
+                    <img class="image-top" src="spotify.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer - Spotify (2018-2019)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui consequuntur necessitatibus
+                        dolores molestias nisi, aut soluta id sequi error delectus veritatis nam.
+                    </div>
+                </div>
+
+
+                <div class="vertical">
+                    <img class="image-top" src="facebook.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer - Facebook(2019-2020)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui consequuntur necessitatibus
+                        dolores molestias nisi, aut soluta id sequi error delectus veritatis nam.
+                    </div>
+                </div>
+
+
+
+                <div class="vertical">
+                    <img class="image-top" src="twitter.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer - Twitter (2020-2021)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui consequuntur necessitatibus
+                        dolores molestias nisi, aut soluta id sequi error delectus veritatis nam.
+                    </div>
+                </div>
+
+
+                <div class="vertical">
+                    <img class="image-top" src="instagram.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer - Instagram(2021-2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui consequuntur necessitatibus
+                        dolores molestias nisi, aut soluta id sequi error delectus veritatis nam.
+                    </div>
+                </div>
+
+
+                <div class="vertical">
+                    <img class="image-top" src="youtube.png" alt="">
+                    <div class="vertical-title">
+                        Software Developer - YouTube (2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui consequuntur necessitatibus
+                        dolores molestias nisi, aut soluta id sequi error delectus veritatis nam.
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Rishab's Developer Porfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Secvices</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Secvices</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Secvices</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-rights">
+            Copyright &#169; www.rishabportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
+            typeSpeed: 50,
+        });
+    </script>
+
+    <script>
+        document.querySelector(".burger").addEventListener("click", () => {
+            document.querySelector(".right").classList.toggle("nav-open");
+        });
+    </script>
+
+
+
+</body>
+
+</html>
